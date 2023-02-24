@@ -1,16 +1,17 @@
 train:
-  batch_size: 18
+  # originally 16
+  batch_size: 3
   lr: 0.00003
   weight_decay: 0.00
-  num_workers: 64
-  gpus: 2 #ddp
+  num_workers: 0
+  gpus: 1 #ddp
   opt_eps: 1e-9
   beta1: 0.5
   beta2: 0.999
 
 data:
-  dir: '/DATA1/VCTK/VCTK-Corpus/wav48' #dir/spk/format
-  format: '*mic1.pt'
+  dir: 'C:/Users/chris/Desktop/VCTK/VCTK-Corpus/VCTK-Corpus/wav48' #dir/spk/format
+  format: '*.pt'
   cv_ratio: (100./108., 8./108., 0.00) #train/val/test
 
 audio:
